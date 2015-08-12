@@ -1,0 +1,20 @@
+PROBLEM 5  (10/10 points)
+Write a Python function that returns the sublist of strings in aList that contain fewer than 4 characters. For example, if aList = ["apple", "cat", "dog", "banana"], your function should return: ["cat", "dog"]
+
+This function takes in a list of strings and returns a list of strings. Your function should not modify aList.
+
+def lessThan4(aList):
+    '''
+    aList: a list of strings
+    '''
+    # Your code here
+
+solution :
+# Paste your function here
+def lessThan4(aList):
+    # Your code here
+    final = []
+    for key in aList:
+        if(len(key)<4):
+            final.append(key)
+    return final

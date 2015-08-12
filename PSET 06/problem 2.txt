@@ -1,0 +1,27 @@
+PROBLEM 1: ENCRYPTION (APPLYCODER)  (15/15 points)
+Next, define the function applyCoder, which applies a coder to a string of text.
+
+Test Cases
+
+>>> applyCoder("Hello, world!", buildCoder(3))
+'Khoor, zruog!'
+>>> applyCoder("Khoor, zruog!", buildCoder(23))
+'Hello, world!'
+
+solution:
+def applyCoder(text, coder):
+    """
+    Applies the coder to the text. Returns the encoded text.
+
+    text: string
+    coder: dict with mappings of characters to shifted characters
+    returns: text after mapping coder chars to original text
+    """
+    ### TODO
+    new_text=''
+    for value in text:
+        if(coder.has_key(value)):
+            new_text = new_text + coder[value]
+        else:
+            new_text = new_text + value
+    return new_text
